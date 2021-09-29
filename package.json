@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node server"
+    "dev": "nodemon --exec babel-node server",
+    "migrate": "npx prisma migrate dev --preview-feature",
+    "studio": "npx prisma studio"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,9 @@
     "@graphql-tools/load-files": "^6.4.0",
     "@graphql-tools/merge": "^8.1.2",
     "@graphql-tools/schema": "^8.2.0",
+    "@prisma/client": "^3.1.1",
     "apollo-server": "^2.25.2",
+    "bcrypt": "^5.0.1",
     "graphql": "^15.6.0",
     "graphql-tools": "^8.2.0"
   },
