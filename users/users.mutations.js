@@ -16,15 +16,20 @@ export default {
                     ]
                 }
             });
+
+            
+            console.log(existingUser);
+
+            if (existingUser) {
+                return {"ok": false, "error": "$error"}
+            }
             const uglyPasssword = await bcrypt.hash(password,10);
-            console.log(uglyPasssword);
-            return client.user.create({
+            client.user.create({
                 data:{
                     username, email, name, location, password:uglyPasssword, avatarURL, githubUsername
                 }
             });
-            // hash password
-            // save and return the user
+            return {"ok": true}
         }
     },
 };
