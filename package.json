@@ -27,7 +27,8 @@
     "apollo-server": "^2.25.2",
     "bcrypt": "^5.0.1",
     "graphql": "^15.6.0",
-    "graphql-tools": "^8.2.0"
+    "graphql-tools": "^8.2.0",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
